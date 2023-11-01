@@ -1,0 +1,5 @@
+- name: add cron entry for genJSON.sh
+  ansible.builtin.cron:
+    name: "genJSON.sh"
+    minute: "*/10"
+    job: "/root/genJSON.sh"

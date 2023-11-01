@@ -1,0 +1,8 @@
+# copy_file.yml
+- name: copy files to destination
+  hosts: centos
+  tasks:
+    - name: copy src.txt as dest.txt in the same dir 
+      copy:
+        src: pippo.txt
+        dest: /tmp/pippo.txt

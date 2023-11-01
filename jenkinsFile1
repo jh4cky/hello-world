@@ -5,7 +5,7 @@ pipeline {
     stage('Hello') {
       steps {
         sh '''
-          ansible --version
+          ansible-playbook playbooks/os.yaml -i inventory/hosts-ansibl  -u root -e "ansible_password=emergenza"
         '''
        }
      }
