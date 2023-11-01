@@ -7,7 +7,7 @@ pipeline {
     stage('Hello') {
       steps {
         sh '''
-          ansible-playbook playbooks/os.yaml -i inventory/hosts-ansible  -u root -e ansible_password=$ANSIBLE_PASS -v 
+          ansible-playbook playbooks/os.yaml -i inventory/hosts-ansible  -u root -e ansible_password=$ANSIBLE_ROOT_PASS 
         '''
        }
      }
