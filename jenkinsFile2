@@ -4,7 +4,7 @@ pipeline {
     ANSIBLE_ROOT_PASS=credentials('rootPass')
   }
   stages {
-    stage('Hello') {
+    stage('Ansible Playbook') {
       steps {
         sh '''
           ansible-playbook playbooks/os.yaml -i inventory/hosts-ansible  -u root -e ansible_password=$ANSIBLE_ROOT_PASS 
